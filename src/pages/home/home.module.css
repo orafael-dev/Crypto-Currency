@@ -18,7 +18,7 @@
 }
 
 .form button {
-  background-color: transparent;
+  background: transparent;
 }
 
 table {
@@ -31,12 +31,12 @@ table {
 }
 
 table caption {
-  font-size: 1.5em;
+  font-size: 16px;
   margin: 0.5em 0 0.75em;
 }
 
 th {
-  color: #fefefe;
+  color: #fff;
 }
 
 .tr {
@@ -62,7 +62,7 @@ table td {
 .tdLabel {
   font-weight: bold;
   font-size: 18px;
-  color: #fefefe;
+  color: #fff;
 }
 
 .tdProfit {
@@ -70,33 +70,56 @@ table td {
   font-weight: bold;
 }
 
-.tdLabel {
+.tdLoss {
   color: #f91257;
   font-weight: bold;
 }
 
 .buttonMore {
-  background-color: #30beff;
+  background: #30beff;
+  color: #fff;
   padding: 8px 24px;
-  color: #fefefe;
-  margin: 14px 0;
   border-radius: 8px;
+  margin: 14px 0;
+  cursor: pointer;
 }
 
+.logo {
+  width: 20px;
+  height: 20px;
+  transition: all 1s;
+}
+
+.logo:hover {
+  transform: scale(1.3);
+  z-index: 99;
+}
+
+.name {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* RESPONSIVIDADE TABELA */
 @media screen and (max-width: 600px) {
+  .name img {
+    margin-left: 14px;
+  }
+
   table {
     border: 0;
   }
 
   table thead {
     border: none;
-    clip: rect (0 0 0 0);
+    clip: rect(0 0 0 0);
     height: 1px;
     margin: -1px;
     overflow: hidden;
     position: absolute;
     width: 1px;
-    padding: 1px;
+    padding: 0;
   }
 
   .tr {
